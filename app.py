@@ -23,11 +23,11 @@ def fetch_track():
     return result
 
 
-@app.route('/track/lyric', methods=['GET'])
-def getTrackLyric():
-    track_name = request.get_data()
-    result = music_recommend.getTrackLyrics(name=track_name)
-    return result
+# @app.route('/track/lyric', methods=['GET'])
+# def getTrackLyric():
+#     track_name = request.get_data()
+#     result = music_recommend.getTrackLyrics(name=track_name)
+#     return result
 
 
 # data analyze

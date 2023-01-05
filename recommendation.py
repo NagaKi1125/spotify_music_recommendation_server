@@ -52,7 +52,7 @@ class MusicRecommendation:
     data = pd.read_csv("data/data.csv")
     genre_data = pd.read_csv('data/data_by_genres.csv')
     year_data = pd.read_csv('data/data_by_year.csv')
-    lyrics_df = pd.read_csv('data/lyrics.csv')
+    # lyrics_df = pd.read_csv('data/lyrics.csv')
     # spotify
     sp = spotipy.Spotify(
         auth_manager=SpotifyClientCredentials(client_id="44d387e458e547b3a49f511e3536c568",
@@ -241,11 +241,11 @@ class MusicRecommendation:
                 break
         return songs
 
-    def getTrackLyrics(self, name):
-        lyric = ''
-        for index, l in MusicRecommendation.lyrics_df.iterrows():
-            if name == l['song']:
-                lyric = {'track_name': l['song'], 'lyric': l['seq']}
-                break
-        return lyric
+    # def getTrackLyrics(self, name):
+    #     lyric = ''
+    #     for index, l in MusicRecommendation.lyrics_df.iterrows():
+    #         if name == l['song']:
+    #             lyric = {'track_name': l['song'], 'lyric': l['seq']}
+    #             break
+    #     return lyric
 
